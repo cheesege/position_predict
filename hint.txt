@@ -1,0 +1,10 @@
+我有甚麼要講大概都會打這:D
+
+我這邊沒有把node_modules上傳
+你打npm ci就好:D
+(記得載node js)
+(看到了可以刪掉)
+
+用過的套件:react react-dom next next-images
+
+執行用npm run dev

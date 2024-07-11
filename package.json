@@ -1,0 +1,18 @@
+{
+  "name": "position_predict",
+  "version": "1.0.0",
+  "description": "試做型落點分析，因為高中老師的提議而決定在升大學的暑假開始實作",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.2.5",
+    "next-images": "^1.8.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
