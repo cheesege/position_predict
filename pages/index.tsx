@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
-import Layout from "../components/layout";
 
 
 const test = () => {
     return (
-        <Layout>  
+        <div>  
             <Head>
                 <title>
                     酷酷的落點分析
@@ -15,7 +14,7 @@ const test = () => {
             <h1>
                 goto <Link href="/about">about!</Link>
             </h1>
-        </Layout>
+        </div>
     )
 }
 
