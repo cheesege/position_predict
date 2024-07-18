@@ -5,9 +5,9 @@ const Navbar = () => {
     return(
         <div className="">
             <NavbarItem name="主頁" url="/"/>
-            <NavbarItem name="學測" url="/first"/>
-            <NavbarItem name="分科" url="/second"/>
-            <NavbarItem name="關於開發者" url="/about"/>
+            <NavbarItem name="學測" url="./GSAT"/>
+            <NavbarItem name="分科" url="./AST"/>
+            <NavbarItem name="關於開發者" url="./about"/>
         </div>
     )
 }
