@@ -7,3 +7,9 @@
 ----
 大考中心對學測跟分科(其實是指考,隨便拉)的英文命名
 https://www.ceec.edu.tw/en/xmdoc/cont?xsmsid=0J180519600611186512
+---------
+下載一下Prettier 不然我們縮排會不一樣
+https://github.com/prettier/prettier-vscode
+---------
+
+
