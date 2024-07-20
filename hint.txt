@@ -1,4 +1,4 @@
-用過的套件:react react-dom next next-images
+用過的套件:react react-dom next
 
 執行用npm run dev
 
