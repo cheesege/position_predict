@@ -25,3 +25,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+@font-face {
+  font-family: pixel11;
+  src: url(../public/fonts/Cubic_11_1.300_R.woff2);
+}
