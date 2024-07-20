@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-const NavbarItem = ({name , url}) => {
+const NavbarItem = ({name , url,className}) => {
     return(
-        <Link href={url}>{name}</Link>
+        <Link href={url} className={className}>{name}</Link>
     )
 }
 
