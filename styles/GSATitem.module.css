@@ -1,0 +1,51 @@
+.title,
+.red_light,
+.yellow_light,
+.green_light {
+  margin: 0px;
+}
+.red_light::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: rgb(235, 8, 8);
+  border-radius: 50%;
+  display: inline-block;
+}
+.yellow_light::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: rgb(233, 233, 16);
+  border-radius: 50%;
+  display: inline-block;
+}
+.green_light::before {
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+.obj {
+  visibility: visible;
+}
+.submitbutton {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.submitbutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
