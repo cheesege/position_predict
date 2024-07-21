@@ -15,6 +15,23 @@ const Score = ({ name, subject, className }) => {
   );
 };
 
+const APCSScore = ({ name, subject, className }) => {
+  return (
+    <div className={className}>
+      <label htmlFor="">{name}級分：</label>
+      <input
+        type="number"
+        name={subject}
+        id={subject}
+        min="0"
+        max="5"
+        defaultValue={""}
+        className="hide-arrows"
+      />
+    </div>
+  );
+};
+
 const School = ({ className }) => {
   return (
     //選項先放著
@@ -56,4 +73,4 @@ const Light = ({ name, color, className }) => {
   );
 };
 
-export { Score, School, Chooseyear, Light };
+export { Score, School, Chooseyear, Light, APCSScore };

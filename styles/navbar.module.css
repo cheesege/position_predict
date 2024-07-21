@@ -1,41 +1,38 @@
-.nav{
-    width:auto;
-    height: 8vh;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.nav {
+  width: auto;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
-
-    background:linear-gradient(35deg,#ffd6a5,#bdb2ff);
+  background: linear-gradient(35deg, #ffd6a5, #bdb2ff);
 }
 
-.link{
-    width: fit-content;
-    height: 4vh;
-    align-items: center;
+.link {
+  width: fit-content;
+  height: 4vh;
+  align-items: center;
 
-    display: flex;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+  display: flex;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-.obj{
-    display: flex;
-    white-space:nowrap;
-    margin-left: 8rex;
-    margin-right: 8rex;
+.obj {
+  display: flex;
+  white-space: nowrap;
+  margin-left: 8rex;
+  margin-right: 8rex;
 
-    font-size: 1.3rem;
-    font-family:pixel11;
-    color:#322A26;
+  font-size: 2rem;
+  font-family: pixel11;
+  color: #322a26;
 
-    transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
-.obj:hover, .obj:active{
-    text-decoration: none;
-    font-size: 1.7rem;
+.obj:hover,
+.obj:active {
+  text-decoration: none;
+  font-size: 2.5rem;
 }
-
-

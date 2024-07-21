@@ -1,5 +1,5 @@
 import React from "react";
-import { Score, School, Chooseyear, Light } from "./item";
+import { Score, School, Chooseyear, Light, APCSScore } from "./item";
 import style from "../../styles/GSATitem.module.css";
 const GSAT = () => {
   return (
@@ -13,6 +13,16 @@ const GSAT = () => {
           <Score name="數B " subject="mathB" className={style.obj} />
           <Score name="自然" subject="nature" className={style.obj} />
           <Score name="社會" subject="society" className={style.obj} />
+          <APCSScore
+            name="APCS觀念題"
+            subject="concept"
+            className={style.obj}
+          />
+          <APCSScore
+            name="APCS實作題"
+            subject="implement"
+            className={style.obj}
+          />
         </form>
       </div>
 

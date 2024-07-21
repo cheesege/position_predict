@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #FFF3F0;
+  background-color: #fff3f0;
 }
 
 * {
@@ -16,9 +16,9 @@ body {
   margin: 0;
 }
 
-
 /* Firefox */
 .hide-arrows {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
