@@ -9,18 +9,17 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+/* Chrome, Safari, Edge, Opera */
+.hide-arrows::-webkit-outer-spin-button,
+.hide-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
-img {
-  max-width: 100%;
-  display: block;
+/* Firefox */
+.hide-arrows {
+  -moz-appearance: textfield;
 }
 
 @font-face {

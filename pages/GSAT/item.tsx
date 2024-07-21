@@ -9,6 +9,7 @@ const Item = ({ name, subject }) => {
         min="0"
         max="15"
         defaultValue={0}
+        className="hide-arrows"
       />
     </div>
   );

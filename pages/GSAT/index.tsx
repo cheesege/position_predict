@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Item from "./item";
 const GSAT = () => {
   return (
