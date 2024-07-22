@@ -26,3 +26,7 @@ body {
   font-family: pixel11;
   src: url(../public/fonts/Cubic_11_1.300_R.woff2);
 }
+@font-face {
+  font-family: openhuninn;
+  src: url(../public/fonts/jf-openhuninn-2.0.woff2);
+}
