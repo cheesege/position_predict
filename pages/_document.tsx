@@ -5,7 +5,6 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html>
-      <link rel="preload" href='../public/fonts/Cubic_11_1.300_R.woff2' as='font' type='font/woff2' crossOrigin=''></link>
       <title>
         酷酷的落點分析
       </title>
