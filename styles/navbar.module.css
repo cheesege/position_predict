@@ -29,6 +29,7 @@
   color: #322a26;
 
   transition: all 250ms linear;
+  text-decoration: none;
 }
 
 .obj:hover,
