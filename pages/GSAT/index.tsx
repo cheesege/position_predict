@@ -1,6 +1,9 @@
 import React from "react";
 import { Score, School, Chooseyear, Light, APCSScore } from "./item";
 import style from "../../styles/GSATitem.module.css";
+import "./submit"
+import { submit } from "./submit";
+
 const GSAT = () => {
   return (
     <>
@@ -60,7 +63,7 @@ const GSAT = () => {
         </form>
       </div>
 
-      <button className={style.result_submitbutton}>提交！</button>
+      <button className={style.result_submitbutton} onClick={submit}>提交！</button>
     </>
   );
 };
