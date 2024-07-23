@@ -1,7 +1,8 @@
 .title,
 .red_light,
 .yellow_light,
-.green_light {
+.green_light,
+.choose_school {
   margin: 0px;
 }
 .red_light::before {
@@ -31,7 +32,8 @@
 .obj {
   visibility: visible;
 }
-.submitbutton {
+.result_submitbutton,
+.school_submitbutton {
   background-color: #04aa6d; /* Green */
   border: none;
   color: white;

@@ -25,17 +25,30 @@ const GSAT = () => {
           />
         </form>
       </div>
+      <School
+        className={style.Sele}
+        button_className={style.school_submitbutton}
+        choose_school_className={style.choose_school}
+      ></School>
 
-      <h1 className={style.title}>選擇要查詢科系</h1>
+      {/* <h1 className={style.title}>選擇要查詢科系</h1>
       <label htmlFor="school">選擇學校：</label>
-      <School className={style.Sele} />
-      <br></br>
+      <School className={style.Sele} name="school" />
+      <br />
       <label htmlFor="major">選擇系所：</label>
-      <School className={style.Sele} />
+      <School className={style.Sele} name="major" />
+      <br /> */}
+
+      {/* <ol className={style.choose_school} id="choose_school">
+        <li id="nothing">nothing</li>
+      </ol> */}
+
+      {/* <School_submitbutton className={style.school_submitbutton} /> */}
 
       <h1 className={style.title}>參考年度（複選）</h1>
       <Chooseyear max_year="113" className={style.Chooseyear} />
-      <br></br>
+
+      <br />
 
       <div>
         <h1 className={style.title}>自訂危險程度</h1>
@@ -47,8 +60,7 @@ const GSAT = () => {
         </form>
       </div>
 
-      {/* <p className={style.redlight}>紅燈</p> */}
-      <button className={style.submitbutton}>提交！</button>
+      <button className={style.result_submitbutton}>提交！</button>
     </>
   );
 };
