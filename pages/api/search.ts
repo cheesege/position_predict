@@ -6,5 +6,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const year = req.body.year;
   const range = req.body.range;
 
-  res.status(200).json({});
+  res.status(200).json({score : score,apcs:apcs,year:year,dan:range});
 }

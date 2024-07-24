@@ -1,4 +1,4 @@
-const submit = () =>{
+const submit = async() =>{
     var score = []
     var subject = ["chinese","english","mathA","mathB","nature","society"]
     for(let i = 0; i < subject.length ;i++){
@@ -51,6 +51,15 @@ const submit = () =>{
     dan.push(document.getElementById("yellow").value)
     dan.push(document.getElementById("green").value)
     console.log(dan)
+
+
+
+    const data = {score : score,apcs:apcs,year:year,dan:dan}
+    const response = await fetch('api/search',{method:'POST',body:data})
+
+
+    const test = await response.json()
+    console.log(test)
 }
 
 export {submit}
