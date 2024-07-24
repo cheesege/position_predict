@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 const Score = ({ name, subject, className }) => {
   return (
@@ -34,20 +34,26 @@ const APCSScore = ({ name, subject, className }) => {
   );
 };
 
-// todo 把這東西並入school
 const School = ({ className, button_className, choose_school_className }) => {
-  const [SelectedSchool, setSelectedSchool] = useState(""); //到時候這裡手動填入第一個校系
-  const [SelectedMajor, setSelectedMajor] = useState("");
-  const olRef = useRef(null);
-  //todo 讀懂olRef
+  const [SelectedSchool, setSelectedSchool] = useState("逢甲大學"); //這裡手動填入第一個校系
+  const [SelectedMajor, setSelectedMajor] = useState("資訊工程學系");
+
+  const handle_new_li_cnClick = function () {
+    const ol = document.getElementById("choose_school");
+    ol.removeChild(this);
+    // console.log(this.textContent);
+  };
 
   const handle_School_submitbutton_onClick = () => {
-    // const ol = document.getElementById("choose_school");
-    if (olRef.current) {
+    const ol = document.getElementById("choose_school");
+    if (ol) {
       const new_li = document.createElement("li");
       new_li.textContent = `${SelectedSchool} - ${SelectedMajor}`;
-      //todo 迭代看有沒有重複的
-      olRef.current.appendChild(new_li);
+      new_li.onclick = handle_new_li_cnClick;
+      for (const i of ol.children) {
+        if (i.textContent === new_li.textContent) return;
+      }
+      ol.appendChild(new_li);
     }
   };
 
@@ -86,18 +92,15 @@ const School = ({ className, button_className, choose_school_className }) => {
       </select>
       <br />
 
-      <ol
-        className={choose_school_className}
-        id="choose_school"
-        ref={olRef}
-      ></ol>
-
       <button
         className={button_className}
         onClick={handle_School_submitbutton_onClick}
       >
         確認
       </button>
+
+      <label>(點擊校系即可刪除)</label>
+      <ol className={choose_school_className} id="choose_school"></ol>
     </>
   );
 };
