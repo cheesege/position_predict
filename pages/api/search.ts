@@ -4,7 +4,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const score = req.body.score;
   const apcs = req.body.apcs;
   const year = req.body.year;
-  const range = req.body.range;
+  const dan = req.body.dan;
 
-  res.status(200).json({score : score,apcs:apcs,year:year,dan:range});
+  return res.status(200).json({
+    score,
+    apcs,
+    year,
+    dan
+  });
+  
+  
 }

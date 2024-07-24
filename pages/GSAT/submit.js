@@ -24,7 +24,6 @@ const submit = async() =>{
         alert("您未填寫任何成績\n請重新輸入")
         return
     }
-    console.log(score)
 
     var apcs = []
     apcs.push(Number(document.getElementById("concept").value))
@@ -39,7 +38,6 @@ const submit = async() =>{
             return
         }
     }
-    console.log(apcs)
 
     var year = []
     for (let i = parseInt(113), cnt = 0; i >= 111; cnt++, i--) {
@@ -51,31 +49,29 @@ const submit = async() =>{
         alert("未選取參考年度\n請重新輸入")
         return
     }
-    console.log(year)
 
     var dan = []
     dan.push(document.getElementById("red").value)
     dan.push(document.getElementById("yellow").value)
     dan.push(document.getElementById("green").value)
-    console.log(dan)
-    
+
     var school = []
     let cnt=document.getElementById("choose_school")
     for(const i of cnt.children ){
         school.push(i.textContent);
-        console.log(i.textContent);
     }
     if(cnt.children.length == 0){
         alert("未選取任一校系\n請重新輸入")
         return
     }
 
-    const data = {score : score,apcs:apcs,year:year,dan:dan}
-    const response = await fetch('api/search',{method:'POST',body:data})
+    const data = {score,apcs,year,dan}
+    const response = await fetch('api/search',{method:'POST',headers: { "content-type": "application/json" },body:JSON.stringify(data)})
 
 
     const test = await response.json()
     console.log(test)
+
 
 }
 
