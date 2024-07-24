@@ -58,6 +58,7 @@ const submit = async() =>{
     dan.push(document.getElementById("yellow").value)
     dan.push(document.getElementById("green").value)
     console.log(dan)
+    
     var school = []
     let cnt=document.getElementById("choose_school")
     for(const i of cnt.children ){
