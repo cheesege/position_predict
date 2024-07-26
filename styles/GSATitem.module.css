@@ -19,7 +19,7 @@
 .yellow_light,
 .green_light,
 .choose_school {
-  margin: 0px;
+  margin: 0px 0px 5px 0px;
 }
 .red_light::before {
   content: "";
@@ -48,7 +48,6 @@
 .obj {
   visibility: visible;
 }
-.result_submitbutton,
 .school_submitbutton {
   background-color: #04aa6d; /* Green */
   border: none;
@@ -58,12 +57,24 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 5px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
-.submitbutton:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+.result_submitbutton {
+  padding: 50px 60px;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
 }

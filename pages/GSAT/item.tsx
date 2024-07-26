@@ -12,6 +12,7 @@ const Score = ({ name, subject, className }) => {
         max="15"
         defaultValue={""}
         className="hide-arrows"
+        style={{ width: "100px", height: "25px" }}
       />
     </div>
   );
@@ -35,8 +36,8 @@ const APCSScore = ({ name, subject, className }) => {
 };
 
 const School = ({ className, button_className, choose_school_className }) => {
-  const [SelectedSchool, setSelectedSchool] = useState("逢甲大學"); //這裡手動填入第一個校系
-  const [SelectedMajor, setSelectedMajor] = useState("資訊工程學系");
+  const [SelectedSchool, setSelectedSchool] = useState(""); // todo 填入第一個校系
+  const [SelectedMajor, setSelectedMajor] = useState("");
 
   const handle_new_li_cnClick = function () {
     const ol = document.getElementById("choose_school");
@@ -50,6 +51,7 @@ const School = ({ className, button_className, choose_school_className }) => {
       const new_li = document.createElement("li");
       new_li.textContent = `${SelectedSchool} - ${SelectedMajor}`;
       new_li.onclick = handle_new_li_cnClick;
+
       for (const i of ol.children) {
         if (i.textContent === new_li.textContent) return;
       }

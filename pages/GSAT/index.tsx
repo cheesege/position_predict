@@ -54,11 +54,12 @@ const GSAT = () => {
               <Light name="綠燈" color="green" className={style.green_light} />
             </form>
           </div>
-
-          <button className={style.result_submitbutton} onClick={submit}>
-            提交！
-          </button>
         </div>
+      </div>
+      <div className={style.parent} id={style.submitbutton}>
+        <button className={style.result_submitbutton} onClick={submit}>
+          提交！
+        </button>
       </div>
     </>
   );
