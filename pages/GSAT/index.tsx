@@ -11,12 +11,42 @@ const GSAT = () => {
         <div className={style.divleft}>
           <h1 className={style.title}>請輸入成績 </h1>
           <form action="">
-            <Score name="國文" subject="chinese" className={style.obj} />
-            <Score name="英文" subject="english" className={style.obj} />
-            <Score name="數A " subject="mathA" className={style.obj} />
-            <Score name="數B " subject="mathB" className={style.obj} />
-            <Score name="自然" subject="nature" className={style.obj} />
-            <Score name="社會" subject="society" className={style.obj} />
+            <Score
+              name="國文"
+              subject="chinese"
+              className={style.obj}
+              label={style.label}
+            />
+            <Score
+              name="英文"
+              subject="english"
+              className={style.obj}
+              label={style.label}
+            />
+            <Score
+              name="數A "
+              subject="mathA"
+              className={style.obj}
+              label={style.label}
+            />
+            <Score
+              name="數B "
+              subject="mathB"
+              className={style.obj}
+              label={style.label}
+            />
+            <Score
+              name="自然"
+              subject="nature"
+              className={style.obj}
+              label={style.label}
+            />
+            <Score
+              name="社會"
+              subject="society"
+              className={style.obj}
+              label={style.label}
+            />
             <APCSScore
               name="APCS觀念題"
               subject="concept"

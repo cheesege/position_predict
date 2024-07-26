@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-const Score = ({ name, subject, className }) => {
+const Score = ({ name, subject, className, label }) => {
   return (
     <div className={className}>
-      <label htmlFor={subject}>{name}級分：</label>
+      <label htmlFor={subject} className={label}>
+        {name}級分：
+      </label>
       <input
         type="number"
         id={subject}
@@ -12,7 +14,7 @@ const Score = ({ name, subject, className }) => {
         max="15"
         defaultValue={""}
         className="hide-arrows"
-        style={{ width: "100px", height: "25px" }}
+        style={{ width: "100px", height: "23px" }}
       />
     </div>
   );
@@ -62,36 +64,40 @@ const School = ({ className, button_className, choose_school_className }) => {
   return (
     //選項先放著
     <>
-      <label htmlFor="school">選擇學校：</label>
-      <select
-        name="school"
-        id="school"
-        className={className}
-        onChange={(e) => {
-          setSelectedSchool(e.target.value);
-        }}
-      >
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
+      <div style={{ margin: "0px 0px 8px 0px" }}>
+        <label htmlFor="school">選擇學校：</label>
+        <select
+          name="school"
+          id="school"
+          className={className}
+          onChange={(e) => {
+            setSelectedSchool(e.target.value);
+          }}
+        >
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
       <br />
+      <div style={{ margin: "-20px 0px -8px 0px" }}>
+        <label htmlFor="major">選擇系所：</label>
+        <select
+          name="major"
+          id="major"
+          className={className}
+          onChange={(e) => {
+            setSelectedMajor(e.target.value);
+          }}
+        >
+          <option value="saab">Saab</option>
+          <option value="volvo">Volvo</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
 
-      <label htmlFor="major">選擇系所：</label>
-      <select
-        name="major"
-        id="major"
-        className={className}
-        onChange={(e) => {
-          setSelectedMajor(e.target.value);
-        }}
-      >
-        <option value="saab">Saab</option>
-        <option value="volvo">Volvo</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
       <br />
 
       <button

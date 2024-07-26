@@ -10,6 +10,7 @@
   margin-right: 20px;
   float: left;
 }
+
 .divright {
   margin-left: 20px;
   float: right;
@@ -18,8 +19,10 @@
 .red_light,
 .yellow_light,
 .green_light,
-.choose_school {
-  margin: 0px 0px 5px 0px;
+.choose_school,
+.obj,
+.sele {
+  margin: 0px 0px 8px 0px;
 }
 .red_light::before {
   content: "";
@@ -45,9 +48,12 @@
   border-radius: 50%;
   display: inline-block;
 }
-.obj {
-  visibility: visible;
+
+.title {
+  margin: 0px 0px 8px 0px;
+  font-size: 32px;
 }
+
 .school_submitbutton {
   background-color: #04aa6d; /* Green */
   border: none;
