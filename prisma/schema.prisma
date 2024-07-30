@@ -1,0 +1,108 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Low{
+  code String @unique
+  name String
+  stander Stander?
+  pass1 Pass1?
+  pass2 Pass2?
+  pass3 Pass3?
+  pass4 Pass4?
+  pass5 Pass5?
+  pass6 Pass6? 
+}
+
+model Stander {
+  code String @unique
+  chinese Int //--:0 底標:1 後標:2 均標:3 前標:4 頂標:5
+  english Int
+  mathA Int
+  mathB Int
+  math Int
+  social Int
+  nature Int
+  listen Int //F:0 C:1 B:2 A:3
+  old Boolean //是否為數學新制
+  rel Low @relation(fields: [code],references: [code])
+}
+
+model Pass1 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+model Pass2 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+model Pass3 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+model Pass4 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+model Pass5 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+model Pass6 {
+  code String @unique
+  subject String
+  score Int
+  rel Low @relation(fields: [code],references: [code])
+}
+
+model Stat{
+  id Int @id @default(autoincrement())
+  year Int
+  subject String
+  sum Int
+}
+
+model Search{
+  id Int @id @default(autoincrement())
+  year Int
+  subject String
+  grade Int
+  people Int
+  percent Float
+}
+
+model subject{
+  id Int @id @default(autoincrement())
+  school String
+  major String
+  rec list[]
+}
+
+model list{
+  serial Int @id @default(autoincrement())
+  subid Int 
+  year Int
+  code String
+  rel  subject @relation(fields: [subid],references: [id])
+}
