@@ -7,6 +7,9 @@ const intro = () => {
       <div className={styles.first}>
         <p>完全自定義的落點分析系統</p>
       </div>
+      <div className={styles.parent}>
+        <div className={styles.arrow}></div>
+      </div>
       <div className={styles.second}></div>
       <div className={styles.third}>
         <p>學測就上？</p>
