@@ -6,15 +6,38 @@
   margin: 5rem;
 }
 
+.pack {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  height: 50vh;
+  width: 100%;
+}
+
+.pack_ {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  margin-top: 15rem;
+  height: 50vh;
+  width: 100%;
+}
+
 .first {
   width: 100%;
-  height: 50%;
   display: flex;
   justify-content: center;
   align-content: center;
   animation-duration: 2s;
   animation-name: slidein;
 }
+
 @keyframes slidein {
   /* 0% */
   from {
@@ -34,11 +57,9 @@
     opacity: 1;
   }
 }
-
 .first p {
   width: fit-content;
   height: fit-content;
-  font-size: 45px;
   margin: 15rem 10rem 7rem 10rem;
 
   font-weight: 900;
@@ -46,37 +67,63 @@
   font-family: openhuninn;
 }
 
+.GSAT {
+  font-size: 45px;
+  font-weight: 900;
+  font-size: 65px;
+  font-family: openhuninn;
+  animation-timeline: view(60% 0);
+  animation-duration: 2s;
+  animation-name: twisterInUp;
+}
+
 .arrow {
   justify-content: center;
   align-content: center;
 
-  display: inline-block;
+  position: absolute;
   width: 50px;
   height: 50px;
   border-top: 6px solid #f50;
   border-right: 6px solid #f50;
   transform: rotate(135deg);
 
+  opacity: 0;
+  animation-delay: 1.5s;
   animation-iteration-count: infinite;
   animation-duration: 2s;
   animation-name: arrowmove;
 }
 
 @keyframes arrowmove {
-  from {
+  0% {
+    opacity: 0;
     margin-top: 0px;
   }
-  to {
+  50% {
+    opacity: 1;
+    margin-top: 25px;
+  }
+  100% {
+    opacity: 0;
     margin-top: 50px;
   }
 }
-
-.second {
-  height: 50vh;
-  width: 100%;
-}
-
-.third {
-  height: 50vh;
-  width: 100%;
+@keyframes twisterInUp {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scale(0, 0) rotate(360deg) translateY(100%);
+  }
+  50% {
+    transform-origin: 100% 0;
+    transform: scale(0, 0) rotate(360deg) translateY(100%);
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scale(1, 1) rotate(0deg) translateY(0);
+  }
 }

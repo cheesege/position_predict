@@ -10,18 +10,21 @@ const intro = () => {
       <div className={styles.parent}>
         <div className={styles.arrow}></div>
       </div>
-      <div className={styles.second}></div>
-      <div className={styles.third}>
-        <p>學測就上？</p>
+      <div className={styles.pack_}>
+        <p className={styles.GSAT}>想要學測就上?</p>
         <Link href="./GSAT">HERE!</Link>
+      </div>
+      <div className={styles.pack}>
         <p>分科戰士？</p>
         <Link href="./AST">HERE!</Link>
+      </div>
+      <div className={styles.pack}>
         <p>想知道誰寫的或是看看網站原始碼？</p>
         <Link href="./about">Here!</Link>
       </div>
-      每個網站判斷的標準不一樣？ 由你自己決定贏過多少人才安全 每年考試難度不同？
+      {/* 每個網站判斷的標準不一樣？ 由你自己決定贏過多少人才安全 每年考試難度不同？
       <br />
-      自己決定參考年度
+      自己決定參考年度 */}
     </div>
   );
 };
