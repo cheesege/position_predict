@@ -43,7 +43,7 @@
 
   font-weight: 900;
   font-size: 65px;
-  font-family: openhuninn;
+  font-family: openhuninn, sans-serif;
 }
 
 .arrow {
@@ -58,14 +58,23 @@
   transform: rotate(135deg);
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  animation-delay: 1.5s;
   animation-name: arrowmove;
+  animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0%;
+  animation-fill-mode:forwards
 }
 
 @keyframes arrowmove {
-  from {
+  0% {
+    opacity: 0%;
     transform:translateY(0px)rotate(135deg);
   }
-  to {
+  20%{
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
     transform: translateY(50px)rotate(135deg);
   }
 }
