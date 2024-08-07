@@ -31,29 +31,25 @@
 
 .first {
   width: 100%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-content: center;
-  animation-duration: 2s;
-  animation-name: slidein;
+  overflow: hidden;
 }
 
 @keyframes slidein {
   /* 0% */
   from {
     opacity: 0;
-    margin-right: 100%;
-    width: 300%;
+    transform: translateX(100vw);
   }
   80% {
     opacity: 0.8;
-    margin-right: 0%;
-    width: 100%;
   }
   /* 100% */
   to {
-    margin-right: 0%;
-    width: 100%;
+    transform: translateX(0px);
     opacity: 1;
   }
 }
@@ -64,7 +60,10 @@
 
   font-weight: 900;
   font-size: 65px;
-  font-family: openhuninn;
+  font-family: openhuninn, sans-serif;
+
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 
 .GSAT {
@@ -92,7 +91,11 @@
   animation-delay: 1.5s;
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  animation-delay: 1.5s;
   animation-name: arrowmove;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0%;
+  animation-fill-mode: forwards;
 }
 
 @keyframes arrowmove {
