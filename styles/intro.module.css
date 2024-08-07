@@ -56,7 +56,6 @@
   border-top: 6px solid #f50;
   border-right: 6px solid #f50;
   transform: rotate(135deg);
-
   animation-iteration-count: infinite;
   animation-duration: 2s;
   animation-name: arrowmove;
@@ -64,10 +63,10 @@
 
 @keyframes arrowmove {
   from {
-    margin-top: 0px;
+    transform:translateY(0px)rotate(135deg);
   }
   to {
-    margin-top: 50px;
+    transform: translateY(50px)rotate(135deg);
   }
 }
 
