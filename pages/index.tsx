@@ -15,10 +15,10 @@ const Intro = () => {
       </div>
 
       <div className={styles.center}>
-        <div className={styles.arrow}></div>
+        <div className={styles.arrow} />
       </div>
 
-      <div className={styles.space}></div>
+      <div className={styles.space} />
 
       <div
         className={styles.pack}
@@ -32,7 +32,7 @@ const Intro = () => {
         </Link>
       </div>
 
-      <div className={styles.space}></div>
+      <div className={styles.space} />
 
       <div
         className={styles.pack}
@@ -46,7 +46,7 @@ const Intro = () => {
         </Link>
       </div>
 
-      <div className={styles.space}></div>
+      <div className={styles.space} />
 
       <div
         className={styles.pack}
@@ -60,7 +60,7 @@ const Intro = () => {
         </Link>
       </div>
 
-      <div className={styles.space}></div>
+      <div className={styles.space} />
 
       {/* 每個網站判斷的標準不一樣？ 由你自己決定贏過多少人才安全 每年考試難度不同？
       <br />

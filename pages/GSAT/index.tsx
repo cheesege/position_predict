@@ -62,7 +62,7 @@ const GSAT = () => {
             className={style.Sele}
             button_className={style.school_submitbutton}
             choose_school_className={style.choose_school}
-          ></School>
+          />
         </div>
 
         <div className={style.right}>
