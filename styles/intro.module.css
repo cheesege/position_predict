@@ -1,9 +1,21 @@
-.parent {
+.center {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   margin: 5rem;
+}
+
+.space {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  margin-top: 12rem;
+  height: 10vh;
+  width: 100%;
 }
 
 .pack {
@@ -17,18 +29,6 @@
   width: 100%;
 }
 
-.pack_ {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  flex-direction: column;
-
-  margin-top: 15rem;
-  height: 50vh;
-  width: 100%;
-}
-
 .first {
   width: 100%;
   height: 50%;
@@ -38,21 +38,6 @@
   overflow: hidden;
 }
 
-@keyframes slidein {
-  /* 0% */
-  from {
-    opacity: 0;
-    transform: translateX(100vw);
-  }
-  80% {
-    opacity: 0.8;
-  }
-  /* 100% */
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 .first p {
   width: fit-content;
   height: fit-content;
@@ -61,19 +46,19 @@
   font-weight: 900;
   font-size: 65px;
   font-family: openhuninn, sans-serif;
-
-  animation-duration: 2s;
-  animation-name: slidein;
 }
 
-.GSAT {
+.link {
+  font-weight: 900;
+  font-size: 30px;
+  font-family: openhuninn, sans-serif;
+}
+
+.title {
   font-size: 45px;
   font-weight: 900;
   font-size: 65px;
   font-family: openhuninn;
-  animation-timeline: view(60% 0);
-  animation-duration: 2s;
-  animation-name: twisterInUp;
 }
 
 .arrow {
@@ -87,10 +72,9 @@
   border-right: 6px solid #f50;
 
   opacity: 0;
-  animation-delay: 1.5s;
   animation-iteration-count: infinite;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-name: arrowmove;
   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   opacity: 0%;
@@ -104,28 +88,10 @@
   }
   50% {
     opacity: 1;
-    transform: translateY(25px) rotate(135deg) ;
+    transform: translateY(25px) rotate(135deg);
   }
   100% {
     opacity: 0;
-    transform: translateY(50px) rotate(135deg) ;
-  }
-}
-@keyframes twisterInUp {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-    transform-origin: 100% 0;
-    transform: scale(0, 0) rotate(360deg) translateY(100%);
-  }
-  50% {
-    transform-origin: 100% 0;
-    transform: scale(0, 0) rotate(360deg) translateY(100%);
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-    transform-origin: 0 0;
-    transform: scale(1, 1) rotate(0deg) translateY(0);
+    transform: translateY(50px) rotate(135deg);
   }
 }

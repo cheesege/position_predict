@@ -1,4 +1,4 @@
-用過的套件:react react-dom next
+用過的套件:react react-dom next aos
 
 執行用npm run dev
 
@@ -13,9 +13,10 @@ https://github.com/prettier/prettier-vscode
 我不會美術 --這我
 主頁好難 
 
-
 upd. prisma -> sqlite
 npm install -D prisma
 npm install @prisma/client
 #或你可以用npm ci 我不知道有沒有用
 其實我也不知道用了會不會重置資料庫((
+---------
+主頁好陽春 你有其他想法嗎(((
